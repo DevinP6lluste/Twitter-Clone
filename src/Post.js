@@ -14,11 +14,19 @@ function Post({ displayName, username, verified, text, image, avatar
                 <div className="post__header">
                     <div className="post__headerText">
                         <h3>
-                            Devin Põlluste <span>
-                            <VerifiedUserIcon className="post__badge" />
+                            Devin Põlluste{" "}
+                            <span>
+                                <VerifiedUserIcon className="post__badge" />
                             </span>
                         </h3>
                     </div>
+                    <div className="post__headerDescription">
+                        <p>Dummy text</p>
+                    </div>
+                </div>
+                <img src="https://images.shulcloud.com/111/uploads/Yael/Chagim/celebration-kiddush-220x220.jpg" alt=""/>
+                <div className="post__footer">
+
                 </div>
             </div>
         </div>
