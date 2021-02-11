@@ -2,6 +2,10 @@ import React from "react";
 import "./Post.css";
 import { Avatar } from "@material-ui/core";
 import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
+import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
+import RepeatIcon from "@material-ui/icons/Repeat";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder/";
+import PublishIcon from "@material-ui/icons/Publish";
 
 function Post({ displayName, username, verified, text, image, avatar
 }) {
@@ -15,7 +19,7 @@ function Post({ displayName, username, verified, text, image, avatar
                     <div className="post__headerText">
                         <h3>
                             Devin Põlluste{" "}
-                            <span>
+                            <span className="post__headerSpecial">
                                 <VerifiedUserIcon className="post__badge" />
                             </span>
                         </h3>
@@ -26,7 +30,10 @@ function Post({ displayName, username, verified, text, image, avatar
                 </div>
                 <img src="https://images.shulcloud.com/111/uploads/Yael/Chagim/celebration-kiddush-220x220.jpg" alt=""/>
                 <div className="post__footer">
-
+                    <ChatBubbleOutlineIcon fontSize="small" />
+                    <RepeatIcon fontSize="small" />
+                    <FavoriteBorderIcon fontSize="small" />
+                    <PublishIcon fontsize="small" />
                 </div>
             </div>
         </div>
