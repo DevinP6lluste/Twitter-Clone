@@ -28,7 +28,7 @@ function Post({ displayName, username, verified, text, image, avatar
                         <p>Dummy text</p>
                     </div>
                 </div>
-                <img src="https://images.shulcloud.com/111/uploads/Yael/Chagim/celebration-kiddush-220x220.jpg" alt=""/>
+                <img src="https://e-cdns-images.dzcdn.net/images/cover/d4d73176ffe0577da3cf464cb6334afa/500x500.jpg" alt=""/>
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <RepeatIcon fontSize="small" />
