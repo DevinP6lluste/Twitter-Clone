@@ -7,28 +7,30 @@ import RepeatIcon from "@material-ui/icons/Repeat";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder/";
 import PublishIcon from "@material-ui/icons/Publish";
 
-function Post({ displayName, username, verified, text, image, avatar
-}) {
+function Post({ displayName, username, verified, text, image, avatar }) {
     return (
         <div className="post">
             <div className="post__avatar">
-                <Avatar src="https://pbs.twimg.com/profile_images/1343633760542208002/CZ5ETyT__400x400.jpg"/>
+                <Avatar src={avatar} />
             </div>
             <div className="post__body">
                 <div className="post__header">
                     <div className="post__headerText">
                         <h3>
-                            Devin Põlluste{" "}
+                            {displayName}{" "}
                             <span className="post__headerSpecial">
-                                <VerifiedUserIcon className="post__badge" />
+                                {verified && <VerifiedUserIcon className="post__badge" />} @{username}
                             </span>
                         </h3>
                     </div>
                     <div className="post__headerDescription">
-                        <p>Dummy text</p>
+                        <p>{text}</p>
                     </div>
                 </div>
-                <img src="https://e-cdns-images.dzcdn.net/images/cover/d4d73176ffe0577da3cf464cb6334afa/500x500.jpg" alt=""/>
+                <img 
+                    src={image} 
+                    alt=""
+                />
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <RepeatIcon fontSize="small" />
