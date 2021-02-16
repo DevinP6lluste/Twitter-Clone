@@ -8,10 +8,10 @@ function Feed() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        db.collection('posts').onSnapshot(snapshot => (
-            setPosts(snapshot.docs.map(doc => doc.data()))  
-        ))
-    }, [])
+        db.collection("posts").onSnapshot((snapshot) => 
+            setPosts(snapshot.docs.map((doc) => doc.data()))  
+        );
+    }, []);
 
     return (
         <div className="feed">
@@ -21,14 +21,16 @@ function Feed() {
 
             <TweetBox />
 
-            <Post 
-            displayName="Devin Põlluste"
-            username="devinpolluste"
-            verified={true}
-            text="Have a great day!"
-            avatar="https://pbs.twimg.com/profile_images/1343633760542208002/CZ5ETyT__400x400.jpg"
-            image="https://e-cdns-images.dzcdn.net/images/cover/d4d73176ffe0577da3cf464cb6334afa/500x500.jpg"
-            />
+            {posts.map((post) => (
+                <Post 
+                    displayName={post.displayName}
+                    username={post.username}
+                    verified={post.verified}
+                    text={post.text}
+                    avatar={post.avatar}
+                    image={post.image}
+                />
+            ))}
         </div>
     );
 }
