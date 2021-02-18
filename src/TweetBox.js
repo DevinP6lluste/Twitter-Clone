@@ -7,13 +7,21 @@ function TweetBox() {
     const [tweetMessage, setTweetMessage] = useState("");
     const [tweetImage, setTweetImage] = useState("");
 
-    const sendTweet = e => {
+    const sendTweet = (e) => {
         e.preventDefault();
 
         db.collection("posts").add({
-            
-        })
-    }
+            displayName: "Devin Põlluste",
+            username: "devinpolluste",
+            verified: true,
+            text: tweetMessage,
+            image: tweetImage,
+            avatar: "https://pbs.twimg.com/profile_images/1343633760542208002/CZ5ETyT__400x400.jpg"
+        });
+
+        setTweetMessage("");
+        setTweetImage("");
+    };
 
     return (
         <div className="tweetBox">
